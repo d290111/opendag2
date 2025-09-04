@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologieën - HTML, CSS, PHP, SQL</title>
+    <style>
+        /* Algemene instellingen */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navigatie header */
+        .background {
+            background-image: url('img/BREDA.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-bar {
+            background-color: #4CAF50; /* Green */
+            opacity: 0.7;
+        }
+
+        .wrapper-1 {
+            padding: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .wrapper-1 h2 {
+            color: white;
+            padding-right: 300px;
+        }
+
+        .letter-R {
+            color: #673AB7; /* Purple */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            border: 3px solid #2196F3; /* Blue */
+            color: #2196F3; /* Blue */
+        }
+
+        .citaat {
+            opacity: 0.9;
+            padding: 150px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+
+        .citaat h3 {
+            text-align: center;
+            font-weight: 100;
+            padding: 5px;
+        }
+
+        /* Main secties */
+        h1 {
+            background-color: #673AB7; /* Purple */
+            color: white;
+            font-weight: 300;
+            padding: 50px 100px;
+        }
+
+        .vakken {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #FFFFFF;
+            padding: 0 100px;
+            padding-bottom: 50px;
+        }
+
+        .vakken-1 {
+            border: 3px solid #000;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .vakken-1 img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .vakken-1 h2 {
+            margin: 10px 0;
+        }
+
+        .vakken-1 p, .vakken-1 ul {
+            text-align: left;
+        }
+
+        .vakken-1 ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Knop stijlen */
+        .toggle-button {
+            background-color: #2196F3; /* Blue */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .toggle-button:hover {
+            background-color: #1976D2; /* Darker Blue */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Footer */
+        .nav-footer {
+            padding: 75px 100px;
+            background-color: #4CAF50; /* Green */
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="background">
+            <div class="nav-bar">
+                <div class="wrapper-1">
+                    <h2>CU<span class="letter-R">R</span>IO</h2>
+                    <nav>
+                        <a href="index.html#home">HOME</a>
+                        <a href="index.html#school-vakken">SCHOOL VAKKEN</a>
+                        <a href="index.html#programmeertalen">PROGAMMEER TALEN</a>
+                        <a href="index.html#rooster">ROOSTER</a>
+                        <a href="index.html#docenten">DOCENTEN</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="citaat" id="home">
+                <h2>Web Technologieën</h2>
+                <h3>Leer meer over de bouwstenen van het web: HTML, CSS, PHP en SQL.</h3>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- HTML Sectie -->
+        <section class="vakken" id="html">
+            <h1>HTML</h1>
+            <div class="vakken">
+                <div class="vakken-1">
+                    <img src="img/html.png" alt="HTML">
+                    <h2>Wat is HTML?</h2>
+                    <p>HTML (HyperText Markup Language) is de standaard opmaaktaal voor het maken van webpagina's. Het definieert de structuur en inhoud van een webpagina met behulp van tags.</p>
+                    <button class="toggle-button" onclick="toggleAnswer('html-answer')">Waarom HTML leren?</button>
+                    <div id="html-answer" class="hidden">
+                        <ul>
+                            <li>Basis voor elke website.</li>
+                            <li>Eenvoudig te leren en te gebruiken.</li>
+                            <li>Werkt samen met CSS en JavaScript voor styling en interactiviteit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS Sectie -->
+        <section class="vakken" id="css">
+            <h1>CSS</h1>
+            <div class="vakken">
+                <div class="vakken-1">
+                    <img src="img/css.png" alt="CSS">
+                    <h2>Wat is CSS?</h2>
+                    <p>CSS (Cascading Style Sheets) wordt gebruikt om de stijl en lay-out van webpagina's te beschrijven. Het werkt samen met HTML om kleuren, lettertypen, marges en meer toe te passen.</p>
+                    <button class="toggle-button" onclick="toggleAnswer('css-answer')">Waarom CSS leren?</button>
+                    <div id="css-answer" class="hidden">
+                        <ul>
+                            <li>Maakt websites visueel aantrekkelijk.</li>
+                            <li>Scheidt inhoud (HTML) van stijl (CSS).</li>
+                            <li>Ondersteunt responsive design voor verschillende apparaten.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHP Sectie -->
+        <section class="vakken" id="php">
+            <h1>PHP</h1>
+            <div class="vakken">
+                <div class="vakken-1">
+                    <img src="img/php.png" alt="PHP">
+                    <h2>Wat is PHP?</h2>
+                    <p>PHP (Hypertext Preprocessor) is een server-side scripttaal die wordt gebruikt om dynamische webpagina's te maken. Het wordt vaak gebruikt in combinatie met databases zoals MySQL.</p>
+                    <button class="toggle-button" onclick="toggleAnswer('php-answer')">Waarom PHP leren?</button>
+                    <div id="php-answer" class="hidden">
+                        <ul>
+                            <li>Veel gebruikt voor webdevelopment.</li>
+                            <li>Integreert gemakkelijk met HTML en databases.</li>
+                            <li>Grote community en veel bronnen beschikbaar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SQL Sectie -->
+        <section class="vakken" id="sql">
+            <h1>SQL</h1>
+            <div class="vakken">
+                <div class="vakken-1">
+                    <img src="img/sql.png" alt="SQL">
+                    <h2>Wat is SQL?</h2>
+                    <p>SQL (Structured Query Language) is een taal voor het beheren en manipuleren van relationele databases. Het wordt gebruikt om gegevens op te slaan, op te vragen en te wijzigen.</p>
+                    <button class="toggle-button" onclick="toggleAnswer('sql-answer')">Waarom SQL leren?</button>
+                    <div id="sql-answer" class="hidden">
+                        <ul>
+                            <li>Essentieel voor het werken met databases.</li>
+                            <li>Gebruikt in combinatie met PHP voor dynamische websites.</li>
+                            <li>Standaardtaal voor databasebeheer.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="nav-footer">
+            <p>All rights reserved 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript-functie om antwoorden te tonen/verbergen
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+            } else {
+                answer.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

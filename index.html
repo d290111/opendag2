@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <div class="background">
+            <div class="nav-bar">
+                <div class="wrapper-1">
+                    <h2>CU<span class="letter-R">R</span>IO</h2>
+                    <nav>
+                        <a href="#home">HOME</a>
+                        <a href="#school-vakken">SCHOOL VAKKEN</a>
+                        <a href="#programmeertalen">PROGAMMEER TALEN</a>
+                        <a href="#rooster">ROOSTER</a>
+                        <a href="#docenten">DOCENTEN</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="citaat" id="home">
+                <h2>Over de opleiding</h2>
+                <h3>Zeker! Softwareontwikkeling kan worden beschouwd als het creëren van digitale spellen en toepassingen op een computer. Mensen die zich bezighouden met deze activiteit fungeren als digitale tovenaars, die de computer instrueren om boeiende en interessante dingen te doen, zoals het ontwikkelen van games of tekenprogramma's. Het is als het gebruik van magie op computers, waarmee je fantastische dingen kunt realiseren!</h3>
+            </div>
+        </div>
+    </div>
+    </header>
+    <main>
+        <section class="vakken" id="school-vakken">
+            <h1>SCHOOL VAKKEN</h1>
+            <div class="vakken">
+                <div class="vakken-1">
+                    <img src="img/nl.png" alt="nl">
+                    <H2>Nederlands</H2>
+                    <P>Nederlands Taal niveau 4</P>
+                </div>
+                <div class="vakken-1">
+                    <img src="img/eng.png" alt="en">
+                    <h2>Engels</h2>
+                    <p>Engelse taal niveau 4</p>
+                </div>
+                
+                <div class="vakken-1">
+                    <img src="img/NAV.jpg" alt="NATIVE">
+                    <h2>NATIVE</h2></a>
+                    <p>Leer apps maken voor micro:bit en Windows, met praktische taken die direct toepasbaar zijn in de praktijk.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="talen" id="programmeertalen">
+            <main>
+        <!-- HTML Sectie -->
+        <section class="vakken" id="html">
+            <h1>HTML</h1>
+            <div class="vakken">
+                <div class="vakken-1">
+                    <img src="img/html.png" alt="HTML">
+                    <h2>Wat is HTML?</h2>
+                    <p>HTML (HyperText Markup Language) is de standaard opmaaktaal voor het maken van webpagina's. Het definieert de structuur en inhoud van een webpagina met behulp van tags.</p>
+                    <button class="toggle-button" onclick="toggleAnswer('html-answer')">Waarom HTML leren?</button>
+                    <div id="html-answer" class="hidden">
+                        <ul>
+                            <li>Basis voor elke website.</li>
+                            <li>Eenvoudig te leren en te gebruiken.</li>
+                            <li>Werkt samen met CSS en JavaScript voor styling en interactiviteit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS Sectie -->
+        <section class="vakken" id="css">
+            <h1>CSS</h1>
+            <div class="vakken">
+                <div class="vakken-1">
+                    <img src="img/css.png" alt="CSS">
+                    <h2>Wat is CSS?</h2>
+                    <p>CSS (Cascading Style Sheets) wordt gebruikt om de stijl en lay-out van webpagina's te beschrijven. Het werkt samen met HTML om kleuren, lettertypen, marges en meer toe te passen.</p>
+                    <button class="toggle-button" onclick="toggleAnswer('css-answer')">Waarom CSS leren?</button>
+                    <div id="css-answer" class="hidden">
+                        <ul>
+                            <li>Maakt websites visueel aantrekkelijk.</li>
+                            <li>Scheidt inhoud (HTML) van stijl (CSS).</li>
+                            <li>Ondersteunt responsive design voor verschillende apparaten.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHP Sectie -->
+        <section class="vakken" id="php">
+            <h1>PHP</h1>
+            <div class="vakken">
+                <div class="vakken-1">
+                    <img src="img/php.png" alt="PHP">
+                    <h2>Wat is PHP?</h2>
+                    <p>PHP (Hypertext Preprocessor) is een server-side scripttaal die wordt gebruikt om dynamische webpagina's te maken. Het wordt vaak gebruikt in combinatie met databases zoals MySQL.</p>
+                    <button class="toggle-button" onclick="toggleAnswer('php-answer')">Waarom PHP leren?</button>
+                    <div id="php-answer" class="hidden">
+                        <ul>
+                            <li>Veel gebruikt voor webdevelopment.</li>
+                            <li>Integreert gemakkelijk met HTML en databases.</li>
+                            <li>Grote community en veel bronnen beschikbaar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SQL Sectie -->
+        <section class="vakken" id="sql">
+            <h1>SQL</h1>
+            <div class="vakken">
+                <div class="vakken-1">
+                    <img src="img/sql.png" alt="SQL">
+                    <h2>Wat is SQL?</h2>
+                    <p>SQL (Structured Query Language) is een taal voor het beheren en manipuleren van relationele databases. Het wordt gebruikt om gegevens op te slaan, op te vragen en te wijzigen.</p>
+                    <button class="toggle-button" onclick="toggleAnswer('sql-answer')">Waarom SQL leren?</button>
+                    <div id="sql-answer" class="hidden">
+                        <ul>
+                            <li>Essentieel voor het werken met databases.</li>
+                            <li>Gebruikt in combinatie met PHP voor dynamische websites.</li>
+                            <li>Standaardtaal voor databasebeheer.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript-functie om antwoorden te tonen/verbergen
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+            } else {
+                answer.classList.add('hidden');
+            }
+        }
+    </script>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+        <section class="rooster-flex" id="rooster">
+            <div class="rooster-h1">
+                <h1>Rooster</h1>
+                <p>Ben je benieuwd naar wat je kan verwachten? Hieronder zie je een voorbeeld van de Rooster</p>
+            </div>
+                <div class="container-1">
+                    <img src="img/roooster.png" alt="rooster">
+                </div>
+        </section>
+        <section class="docenten" id="docenten">
+            <h1>DOCENTEN</h1>
+            <div class="docenten">
+                <div class="docenten-1">
+                    <img src="img/per.jpg" alt="">
+                    <h2>Joost</h2>
+                </div>
+                <div class="docenten-1">
+                    <img src="img/per.jpg" alt="">
+                    <h2>Micheal</h2>
+                </div>
+                <div class="docenten-1">
+                    <img src="img/per.jpg" alt="">
+                    <h2>Elton</h2>
+                </div>
+                <div class="docenten-1">
+                    <img src="img/per.jpg" alt="">
+                    <h2>Fedd</h2>
+                </div>
+                
+                <div class="docenten-1">
+                    <img src="img/per.jpg" alt="">
+                    <h2>Steven</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="nav-footer">
+            <p>All rights reserved 2025</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,245 @@
+/* Algemene instellingen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigatie header -------------------------------------------------------------------*/
+.background {
+    background-image: url('../img/BREDA.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(76, 175, 80, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.wrapper-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-bar .letter-R {
+    color: #673AB7;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* Hero sectie ----------------------------------------------------------------------*/
+.citaat {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background: rgba(76, 175, 80, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.citaat h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.citaat h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #f5f5f5;
+}
+
+/* Secties -------------------------------------------------------------------------*/
+section {
+    padding: 3rem 1rem;
+}
+
+.vakken h1, 
+.talen h1, 
+.docenten h1 {
+    background-color: #673AB7;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+/* Cards grid */
+.vakken, 
+.talen, 
+.docenten {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.vakken-1, .talen-1, .docenten-1 {
+    background: #fff;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.vakken-1:hover, .talen-1:hover, .docenten-1:hover {
+    transform: translateY(-5px);
+}
+
+.vakken-1 img, .talen-1 img, .docenten-1 img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Rooster -------------------------------------------------------------------------*/
+.rooster-flex {
+    text-align: center;
+}
+
+.rooster-h1 {
+    margin-bottom: 1rem;
+    color: #673AB7;
+}
+
+.container-1 img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer --------------------------------------------------------------------------*/
+.nav-footer {
+    padding: 2rem 1rem;
+    background-color: #4CAF50;
+    text-align: center;
+    color: white;
+}
+
+/* Responsiveness ------------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .wrapper-1 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .citaat {
+        padding: 1.5rem;
+    }
+
+    .citaat h2 {
+        font-size: 1.5rem;
+    }
+
+    .citaat h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .citaat {
+        padding: 1rem;
+    }
+
+    .citaat h2 {
+        font-size: 1.2rem;
+    }
+
+    .citaat h3 {
+        font-size: 0.85rem;
+    }
+
+    .vakken-1 img, .talen-1 img, .docenten-1 img {
+        width: 60px;
+        height: 60px;
+    }
+}
+.hidden {
+    display: none;
+}
+
+.toggle-button {
+    background-color: #673AB7;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #5e35b1;
+}
